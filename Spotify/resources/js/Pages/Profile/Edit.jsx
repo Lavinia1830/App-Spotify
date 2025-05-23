@@ -5,6 +5,9 @@ import UpdateProfileInformationForm from './Partials/UpdateProfileInformationFor
 import { Head } from '@inertiajs/react';
 
 export default function Edit({ auth, mustVerifyEmail, status }) {
+    
+    const { auth, mustVerifyEmail, status } = usePage().props; // Destruttura anche mustVerifyEmail e status se vengono passate
+
     return (
         <AuthenticatedLayout
             user={auth.user}
